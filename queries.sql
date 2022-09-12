@@ -1,4 +1,4 @@
 /*Queries that provide answers to the questions from all projects.*/
 
-SELECT * from animals WHERE name LIKE '%mon';
+SELECT * from animal WHERE name LIKE '%mon';
 
