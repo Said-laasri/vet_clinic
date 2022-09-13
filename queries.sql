@@ -51,3 +51,17 @@ UPDATE animal SET weight_kg = weight_kg * -1;
 ROLLBACK TO SAVEPOINT H1;
 
 UPDATE animal SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+-- count the number of animals
+
+SELECT COUNT(*) FROM animal;
+
+SELECT COUNT(*) FROM animal WHERE escape_attempts = 0;
+
+SELECT AVG(weight_kg) FROM animal;
+
+SELECT MAX(escape_attempts), neuterred FROM animal GROUP BY neuterred; 
+
+SELECT MIN(weight_kg), MAX(weight_kg) FROM animal;
+
+SELECT AVG(weight_kg) FROM animal WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';    
