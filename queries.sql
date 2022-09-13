@@ -23,3 +23,11 @@ BEGIN;
 UPDATE animal SET species = 'unspecified';
 
 ROLLBACK;
+
+/* update the animal table*/
+
+UPDATE animal SET species = 'digimon' WHERE name LIKE '%mon';   
+
+UPDATE animal SET species = 'pokemon' WHERE species is NULL;
+
+COMMIT;
