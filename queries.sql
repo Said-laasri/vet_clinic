@@ -15,3 +15,11 @@ SELECT * from animal WHERE neuterred = TRUE;
 SELECT * from animal WHERE name != 'Gabumon';
 
 SELECT * from animal Where weight_kg BETWEEN 10.5 AND  17.3;
+
+/* update the animal table*/
+
+BEGIN;
+
+UPDATE animal SET species = 'unspecified';
+
+ROLLBACK;
