@@ -7,3 +7,5 @@ CREATE TABLE animal(
   neuterred boolean ,
   weight_kg decimal ,
 ); 
+
+ALTER TABLE animal ADD species varchar(255);
