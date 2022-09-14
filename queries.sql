@@ -65,3 +65,6 @@ SELECT MAX(escape_attempts), neuterred FROM animal GROUP BY neuterred;
 SELECT MIN(weight_kg), MAX(weight_kg) FROM animal;
 
 SELECT AVG(weight_kg) FROM animal WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';    
+
+
+
