@@ -67,4 +67,13 @@ SELECT MIN(weight_kg), MAX(weight_kg) FROM animal;
 SELECT AVG(weight_kg) FROM animal WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';    
 
 
+-- Link animal table to species table and owners table
+
+-- Update species_id in animal table
+UPDATE animal SET species_id = 2 WHERE name LIKE '%mon';
+
+UPDATE animal SET species_id = 1 WHERE name NOT LIKE '%mon';
+
+-- Update owner_id in animal table
+
 
