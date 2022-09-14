@@ -84,3 +84,20 @@ UPDATE animal SET owners_id = 3 WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animal SET owners_id = 4 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 
 UPDATE animal SET owners_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
+
+
+--  write querries usinf JOIN
+
+SELECT animal.name FROM animal JOIN owners ON animal.owners_id = owners.id WHERE owners.full_name = 'Melody Pond';
+
+SELECT * FROM animal JOIN species ON animal.species_id = species.id WHERE species.name = 'Pokemon';
+
+SELECT animal.name, owners.full_name FROM animal RIGHT JOIN owners ON animal.owners_id = owners.id;
+
+SELECT species.name, COUNT(animal.species_id) FROM animal JOIN species ON species.id = animal.species_id GROUP BY species.name;
+
+SELECT animal.name from animal JOIN owners ON owners.id = animal.owners_id JOIN species on species.id = animal.species_id WHERE animal.species_id = '2' AND animal.owners_id = '2';
+
+SELECT animal.name from animal JOIN owners ON owners.id = animal.owners_id WHERE animal.escape_attempts = '0' AND animal.owners_id = '5';
+
+SELECT full_name, COUNT(owners_id) FROM owners JOIN animal on owners.id = animal.owners_id GROUP BY full_name ORDER BY COUNT (owners_id) desc limit 1;
