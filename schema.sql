@@ -41,3 +41,8 @@ vet_id INTEGER REFERENCES vets(id),
 species_id INTEGER REFERENCES species(id)
 );
 
+-- create join table visits
+CREATE TABLE visits(
+  vet_id INTEGER REFERENCES vets(id),
+  animal_id INTEGER REFERENCES animal(id)
+);
