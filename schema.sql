@@ -34,3 +34,10 @@ CREATE TABLE vets(
   age int NOT NULL,
   date_of_graduation DATE NOT NULL
 );
+
+-- create join table specializations
+CREATE TABLE specializations(
+vet_id INTEGER REFERENCES vets(id),
+species_id INTEGER REFERENCES species(id)
+);
+
