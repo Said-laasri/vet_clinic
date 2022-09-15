@@ -26,3 +26,24 @@ CREATE TABLE species(
   id bigsERIAL PRIMARY KEY NOT NULL,
   name varchar(255) NOT NULL
 );
+
+-- create table vets
+CREATE TABLE vets(
+  id BIGSERIAL PRIMARY KEY NOT NULL,
+  name varchar(255) NOT NULL,
+  age int NOT NULL,
+  date_of_graduation DATE NOT NULL
+);
+
+-- create join table specializations
+CREATE TABLE specializations(
+vet_id INTEGER REFERENCES vets(id),
+species_id INTEGER REFERENCES species(id)
+);
+
+-- create join table visits
+CREATE TABLE visits(
+  vet_id INTEGER REFERENCES vets(id),
+  animal_id INTEGER REFERENCES animal(id),
+  date_of_visit DATE NOT NULL
+);
