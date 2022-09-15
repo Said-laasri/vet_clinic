@@ -44,5 +44,6 @@ species_id INTEGER REFERENCES species(id)
 -- create join table visits
 CREATE TABLE visits(
   vet_id INTEGER REFERENCES vets(id),
-  animal_id INTEGER REFERENCES animal(id)
+  animal_id INTEGER REFERENCES animal(id),
+  date_of_visit DATE NOT NULL
 );

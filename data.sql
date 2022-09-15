@@ -45,3 +45,15 @@ VALUES('William Tatcher', '45', date'2000-04-23'),
 ('Maisy Smith', '26', date'2019-01-17'),
 ('Stephanie Mendez', '64', date'1981-05-04'),
 ('Jack Harkness', '38', date'2008-06-08');
+
+
+-- insert data to specializations table
+
+INSERT INTO specializations(vet_id, species_id)
+VALUES('1', '1'),
+('3', '1'),
+('3', '2'),
+('4', '2');
+
+-- insert data to visits table
+
